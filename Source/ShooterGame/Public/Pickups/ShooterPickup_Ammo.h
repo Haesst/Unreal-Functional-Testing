@@ -15,6 +15,7 @@ class AShooterPickup_Ammo : public AShooterPickup
 	GENERATED_UCLASS_BODY()
 
 	/** check if pawn can use this pickup */
+	UFUNCTION(BlueprintPure)
 	virtual bool CanBePickedUp(AShooterCharacter* TestPawn) const override;
 
 	bool IsForWeapon(UClass* WeaponClass);

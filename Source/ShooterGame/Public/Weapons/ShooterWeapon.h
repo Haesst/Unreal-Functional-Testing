@@ -106,6 +106,7 @@ class AShooterWeapon : public AActor
 	};
 
 	/** [server] add ammo */
+	UFUNCTION(BlueprintCallable)
 	void GiveAmmo(int AddAmount);
 
 	/** consume a bullet */
@@ -182,6 +183,7 @@ class AShooterWeapon : public AActor
 	EWeaponState::Type GetCurrentState() const;
 
 	/** get current ammo amount (total) */
+	UFUNCTION(BlueprintPure)
 	int32 GetCurrentAmmo() const;
 
 	/** get current ammo amount (clip) */
@@ -191,6 +193,7 @@ class AShooterWeapon : public AActor
 	int32 GetAmmoPerClip() const;
 
 	/** get max ammo amount */
+	UFUNCTION(BlueprintPure)
 	int32 GetMaxAmmo() const;
 
 	/** get weapon mesh (needs pawn owner to determine variant) */
