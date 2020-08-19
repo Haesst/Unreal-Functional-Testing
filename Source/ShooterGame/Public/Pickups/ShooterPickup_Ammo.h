@@ -18,12 +18,13 @@ class AShooterPickup_Ammo : public AShooterPickup
 	UFUNCTION(BlueprintPure)
 	virtual bool CanBePickedUp(AShooterCharacter* TestPawn) const override;
 
+	UFUNCTION(BlueprintPure)
 	bool IsForWeapon(UClass* WeaponClass);
 
 protected:
 
 	/** how much ammo does it give? */
-	UPROPERTY(EditDefaultsOnly, Category=Pickup)
+	UPROPERTY(BlueprintReadWrite, Category=Pickup)
 	int32 AmmoClips;
 
 	/** which weapon gets ammo? */

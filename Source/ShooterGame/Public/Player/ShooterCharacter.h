@@ -80,6 +80,7 @@ class AShooterCharacter : public ACharacter
 	*
 	* @param WeaponClass	Class of weapon to find.
 	*/
+	UFUNCTION(BlueprintPure)
 	class AShooterWeapon* FindWeapon(TSubclassOf<class AShooterWeapon> WeaponClass);
 
 	/**
