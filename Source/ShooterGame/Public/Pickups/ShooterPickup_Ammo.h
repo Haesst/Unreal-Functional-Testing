@@ -28,9 +28,10 @@ protected:
 	int32 AmmoClips;
 
 	/** which weapon gets ammo? */
-	UPROPERTY(EditDefaultsOnly, Category=Pickup)
+	UPROPERTY(BlueprintReadOnly, Category=Pickup)
 	TSubclassOf<AShooterWeapon> WeaponType;
 
 	/** give pickup */
+	UFUNCTION(BlueprintCallable)
 	virtual void GivePickupTo(AShooterCharacter* Pawn) override;
 };
